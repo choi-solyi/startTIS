@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+  
+  </script>
+</head>
+<body>
+  
+  <script>
+    var objarray = [
+  { text: 'One', value: 'A' },
+  { text: 'Two', value: 'B' },
+  { text: 'Three', value: 'C' }
+];
+console.log(objarray)
+console.log('2 객체추가');
+objarray[objarray.length] = {text: 'Four', value: 'D'}
+console.log(objarray)
+
+console.log('3 객체 변경');
+const findIndex = objarray.findIndex((item, index, array) => {  
+  return item.text === 'Two'
+})
+objarray[findIndex] = {text: '2', value: '2'}
+console.log(objarray);
+
+   
+console.log('4 삭제 //splice사용');
+const findIndex2 = objarray.findIndex((item) => {
+  return item.text === 'Three'
+})
+objarray.splice(findIndex2, 1)
+console.log(objarray)
+
+console.log('5 filter로 text가 one인거 찾기')
+const FilteredArray = objarray.filter((item, index, array) => {
+  return item.text === 'One'
+})
+console.log(FilteredArray)
+
+console.log('6 map으로 no 프로퍼티 추가')
+objarray.map((item,index,array) => {
+  item.no = index
+  return item;
+})
+console.log(objarray)
+
+console.log('7 reduce 메서드 사용하여 각 요소의 value 프로퍼티를 하나의 문자열로');
+
+
+const vals = objarray
+    .map(item => item.value)
+    .reduce((preitem, curtitem) => preitem + curtitem)
+    
+console.log('vals ' , vals)
+
+console.log('8 findIndex');
+
+console.log('9 filter')
+  </script>
+</body>
+</html>

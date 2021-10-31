@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> /* jQuery 플러그인 임포트 */</script>
+</head>
+<body>
+  
+    <div>
+        <div w3-include-header="header.html"></div>
+        <section id="page1" data-role="page">
+            <div class="content" data-role="content">
+                여기는 바디 안 컨텐츠<br />
+                여기는 바디 안 컨텐츠
+            </div>
+        </section>
+        <div w3-include-footer="footer.html"></div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    $('div[w3-include-header]').load("header_jQuery.html")
+    $('div[w3-include-footer]').load("footer_jQuery.html")
+</script>

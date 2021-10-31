@@ -1,0 +1,23 @@
+{
+  "name": "starttis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "git": "^0.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choi-solyi/startTIS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choi-solyi/startTIS/issues"
+  },
+  "homepage": "https://github.com/choi-solyi/startTIS#readme"
+}
